@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -23,16 +24,17 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Name cannot be blank")
-    @Size(min = 3, max = 20, message = "Name must have between 3 and 20 letters")
+    @NotBlank(message = "Name cannot be blank.")
+    @Size(min = 3, max = 20, message = "Name must have between 3 and 20 letters.")
     @Column(nullable = false)
     private String name;
 
-    @Size(max = 20, message = "Lastname must not have more than 20 letters")
+    @Size(max = 20, message = "Lastname must not have more than 20 letters.")
     @Column(name = "lastname", nullable = false)
     private String lastname;
 
-    @NotBlank(message = "CPF must be filled in")
+    @NotBlank(message = "CPF must be filled in.")
+    @CPF
     @Column(nullable = false, unique = true)
     private String cpf;
 
