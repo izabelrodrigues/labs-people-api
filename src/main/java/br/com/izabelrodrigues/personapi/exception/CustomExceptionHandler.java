@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 
+import java.util.Arrays;
 import java.util.Date;
 
 @RestControllerAdvice
@@ -17,7 +18,7 @@ public class CustomExceptionHandler {
         return new ErrorMessage(
                 HttpStatus.NOT_FOUND.value(),
                 new Date(),
-                ex.getMessage(),
+                Arrays.asList(ex.getMessage()),
                 request.getDescription(true));
     }
 
@@ -27,7 +28,17 @@ public class CustomExceptionHandler {
         return new ErrorMessage(
                 HttpStatus.INTERNAL_SERVER_ERROR.value(),
                 new Date(),
-                ex.getMessage(),
+                Arrays.asList(ex.getMessage()),
                 request.getDescription(false));
+    }
+
+    @ExceptionHandler(value = {BusinessValidationException.class})
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
+    public ErrorMessage businessExceptionHandler(BusinessValidationException ex, WebRequest request) {
+        return new ErrorMessage(
+                HttpStatus.BAD_REQUEST.value(),
+                new Date(),
+                ex.getMessages(),
+                request.getDescription(true));
     }
 }

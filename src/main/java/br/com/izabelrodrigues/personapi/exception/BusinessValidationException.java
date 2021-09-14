@@ -1,15 +1,16 @@
 package br.com.izabelrodrigues.personapi.exception;
 
+import java.util.List;
+
 public class BusinessValidationException extends Exception {
 
-    private final String customMessage;
+    private final List<String> messages;
 
-    public BusinessValidationException(String customMessage) {
-        this.customMessage = customMessage;
+    public BusinessValidationException(List<String> messages) {
+        this.messages = messages;
     }
 
-    @Override
-    public String getMessage() {
-        return customMessage;
+    public List<String> getMessages() {
+        return messages;
     }
 }

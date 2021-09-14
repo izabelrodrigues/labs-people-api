@@ -28,7 +28,7 @@ public class Person {
     @Column(nullable = false)
     private String name;
 
-    @Size(max = 20, message = "Last Name must not have more than 20 letters")
+    @Size(max = 20, message = "Lastname must not have more than 20 letters")
     @Column(name = "lastname", nullable = false)
     private String lastname;
 
