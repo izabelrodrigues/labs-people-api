@@ -29,7 +29,7 @@ public class CustomExceptionHandler {
                 HttpStatus.INTERNAL_SERVER_ERROR.value(),
                 new Date(),
                 Arrays.asList(ex.getMessage()),
-                request.getDescription(false));
+                request.getDescription(true));
     }
 
     @ExceptionHandler(value = {BusinessValidationException.class})
