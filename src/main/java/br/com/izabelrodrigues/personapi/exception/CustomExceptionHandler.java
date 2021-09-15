@@ -1,4 +1,4 @@
-package br.com.izabelrodrigues.personapi.exception;
+package br.com.izabelrodrigues.personapi.exception;/* Created by Izabel Rodrigues */
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;

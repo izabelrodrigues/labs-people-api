@@ -1,4 +1,4 @@
-package br.com.izabelrodrigues.personapi.mapper;
+package br.com.izabelrodrigues.personapi.mapper;/* Created by Izabel Rodrigues */
 
 import br.com.izabelrodrigues.personapi.dto.PersonDTO;
 import br.com.izabelrodrigues.personapi.model.Person;
@@ -14,9 +14,10 @@ public interface PersonMapper {
 
     PersonMapper INSTANCE = Mappers.getMapper(PersonMapper.class);
 
-    @Mapping(target = "id", ignore = true)
     @Mapping(source = "birthdate", target = "birthdate", qualifiedByName = "localDate")
     Person toPerson(PersonDTO personDTO);
+
+    PersonDTO toPersonDTO(Person person);
 
     @Named("localDate")
     static LocalDate localDate(String date) {

@@ -1,4 +1,4 @@
-package br.com.izabelrodrigues.personapi.repository;
+package br.com.izabelrodrigues.personapi.repository;/* Created by Izabel Rodrigues */
 
 import br.com.izabelrodrigues.personapi.model.Person;
 import org.springframework.data.jpa.repository.JpaRepository;

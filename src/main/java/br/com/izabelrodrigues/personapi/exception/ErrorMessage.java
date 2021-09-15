@@ -1,4 +1,4 @@
-package br.com.izabelrodrigues.personapi.exception;
+package br.com.izabelrodrigues.personapi.exception;/* Created by Izabel Rodrigues */
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

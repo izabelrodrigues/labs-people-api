@@ -1,4 +1,4 @@
-package br.com.izabelrodrigues.personapi.exception;
+package br.com.izabelrodrigues.personapi.exception;/* Created by Izabel Rodrigues */
 
 import org.apache.logging.log4j.util.Strings;
 
@@ -22,12 +22,18 @@ public class NotFoundException extends Exception {
 
     @Override
     public String getMessage() {
-        StringBuilder sb = new StringBuilder(typeResource);
-        sb.append(" ");
-        sb.append(idResource);
-        sb.append(" ");
-        sb.append("not found.");
 
-        return Strings.isBlank(customMessage) ? sb.toString() : customMessage;
+        if (Strings.isBlank(customMessage)) {
+            StringBuilder sb = new StringBuilder(typeResource);
+            sb.append(" ");
+            sb.append(idResource);
+            sb.append(" ");
+            sb.append("not found.");
+            return sb.toString();
+        }
+
+        return customMessage;
+
+
     }
 }
