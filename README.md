@@ -10,6 +10,12 @@ Api REST contendo as operações básicas listadas abaixo:
 * update: Atualiza o cadastro de uma pessoa
 * delete: Apaga o registro de uma pessoa
 
+Depois de executar o projeto, é possível ver a documentação da api em:
+
+```
+http://localhost:8080/api-doc.html
+```
+
 Esse projeto foi desenvolvido com o objetivo de atender até o nível 2 do modelo de maturidade de Richardson. Futuramente
 podemos evoluir para o nível 3. Para saber mais sobre esse modelo consulte a documentação nos links da documentação de
 referência abaixo.
@@ -57,7 +63,8 @@ http://localhost:8080/api/v1/people
 * [Documentação oficial do H2 Database](https://h2database.com/html/main.html)
 * [Modelo de maturidade de Richardson](https://restfulapi.net/richardson-maturity-model/)
 * [Postman para download](https://www.postman.com/downloads/)
+* [Documentação OpenApi 3](https://springdoc.org/)
 
 ### Próximos passos
 
-* Desenvolver a documentação da API
+* Testes unitários
