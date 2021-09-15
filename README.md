@@ -37,10 +37,11 @@ referência abaixo.
 mvn spring-boot:run 
 ```
 
-Caso queira executar pela IDE em caso de estudos para facilitar o DEBUG, basta executar a classe main que se encontra
-em:
+Caso queira executar pela IDE em caso de estudos para facilitar o DEBUG, basta executar a classe
+PersonapiApplication.java que se encontra em:
 
-```shell script src/main/java/br/com/izabelrodrigues/personapi/PersonapiApplication.java
+```
+src/main/java/br/com/izabelrodrigues/personapi/PersonapiApplication.java
 ```
 
 * Após o servidor ter sido inicializado a URL base da api será:
