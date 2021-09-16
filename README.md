@@ -29,6 +29,8 @@ referência abaixo.
 * Conta no HEROKU para deploy da aplicação
 * Postman APP para testes da API
 
+Url de publicação no Heroku: https://labs-people-api.herokuapp.com
+
 ### Execução do projeto
 
 * Para executar esse projeto, abra um terminal e de dentro da pasta do projeto execute o comando abaixo:
